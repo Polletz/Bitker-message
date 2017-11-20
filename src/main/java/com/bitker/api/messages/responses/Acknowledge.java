@@ -4,8 +4,8 @@ import java.nio.ByteBuffer;
 
 public class Acknowledge extends Response {
 
-    int n;
-    boolean ok;
+    public int n;
+    public boolean ok;
 
     @Override
     public void read(ByteBuffer msg) {

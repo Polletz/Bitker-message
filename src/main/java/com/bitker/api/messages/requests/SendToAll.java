@@ -6,7 +6,7 @@ import java.nio.ByteBuffer;
 
 public class SendToAll extends Send {
 
-    private int n;
+    public int n;
 
     public void setN(int n) {
         this.n = n;

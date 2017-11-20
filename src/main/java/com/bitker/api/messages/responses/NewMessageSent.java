@@ -8,8 +8,8 @@ import java.nio.ByteBuffer;
 
 public class NewMessageSent extends Response {
 
-    InetAddress addr;
-    String type;
+    public InetAddress addr;
+    public String type;
 
     @Override
     void read(ByteBuffer msg) {

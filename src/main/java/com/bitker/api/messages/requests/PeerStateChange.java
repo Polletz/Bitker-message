@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 
 public class PeerStateChange extends Request {
 
-    byte what;
+    public byte what;
 
     public void setWhat(byte what) {
         this.what = what;

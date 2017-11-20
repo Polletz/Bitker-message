@@ -8,8 +8,8 @@ import java.util.Set;
 
 public class ListenFrom extends Request {
 
-    Set<InetAddress> addrs;
-    byte what;
+    public Set<InetAddress> addrs;
+    public byte what;
 
     public ListenFrom(){
         addrs = new HashSet<>();

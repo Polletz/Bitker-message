@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
 
 public class SendTo extends Send {
 
-    private InetAddress addr;
+    public InetAddress addr;
 
     public void setAddr(InetAddress addr) {
         this.addr = addr;

@@ -8,10 +8,10 @@ import java.nio.ByteBuffer;
 
 public class State extends Response {
 
-    InetAddress addr;
-    byte oldState;
-    byte newState;
-    long time;
+    public InetAddress addr;
+    public byte oldState;
+    public byte newState;
+    public long time;
 
     @Override
     void read(ByteBuffer msg) {

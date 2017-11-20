@@ -6,8 +6,8 @@ import java.util.Set;
 
 public class Listen extends Request {
 
-    Set<String> types;
-    byte what;
+    public Set<String> types;
+    public byte what;
 
     public Listen(){
         types = new HashSet<>();
@@ -16,7 +16,6 @@ public class Listen extends Request {
     public void addType(String type){
         types.add(type);
     }
-
 
     public void setWhat(byte what){
         this.what = what;

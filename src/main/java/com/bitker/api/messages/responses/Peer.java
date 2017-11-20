@@ -8,10 +8,10 @@ import java.nio.ByteBuffer;
 
 public class Peer {
 
-    InetAddress addr;
-    byte service;
-    boolean incoming;
-    String agent;
+    public InetAddress addr;
+    public byte service;
+    public boolean incoming;
+    public String agent;
 
     public void read(ByteBuffer msg) throws UnknownHostException {
         byte [] buf = new byte [16];

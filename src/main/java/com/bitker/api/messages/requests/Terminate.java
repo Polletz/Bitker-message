@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 
 public class Terminate extends Request {
 
-    private long precReq;
+    public long precReq;
 
     public void setPrecReq(long precReq) {
         this.precReq = precReq;

@@ -8,8 +8,8 @@ import java.nio.ByteBuffer;
 
 public class NewConnection extends Response {
 
-    InetAddress addr;
-    boolean incoming;
+    public InetAddress addr;
+    public boolean incoming;
 
     @Override
     void read(ByteBuffer msg) {

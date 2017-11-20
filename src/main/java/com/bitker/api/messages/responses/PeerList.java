@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class PeerList extends Response {
 
-    ArrayList<Peer> list;
+    public ArrayList<Peer> list;
 
     PeerList(){
         list = new ArrayList<>();

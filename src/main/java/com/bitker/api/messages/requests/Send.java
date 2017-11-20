@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
 
 abstract class Send extends Request {
 
-    ByteBuffer msg;
+    public ByteBuffer msg;
 
     public void setMsg(ByteBuffer msg) {
         this.msg = msg;
