@@ -1,7 +1,7 @@
 package com.bitker.api.messages.requests;
 
-import com.bitker.protocol.bitio.LittleEndianOutputStream;
-import com.bitker.protocol.messages.Message;
+import com.bitker.protocol.messages.bitio.LittleEndianOutputStream;
+import com.bitker.protocol.messages.messages.Message;
 import io.nayuki.bitcoin.crypto.Sha256;
 
 import java.io.IOException;

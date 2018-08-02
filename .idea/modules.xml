@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Bitker-message.iml" filepath="$PROJECT_DIR$/Bitker-message.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Messages.iml" filepath="$PROJECT_DIR$/Messages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
     </modules>
   </component>
 </project>
