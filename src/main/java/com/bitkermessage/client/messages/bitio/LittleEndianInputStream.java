@@ -356,6 +356,8 @@ public class LittleEndianInputStream extends FilterInputStream {
 	public static LittleEndianInputStream wrap(final ByteBuffer b) {
 		LittleEndianInputStream leis = new LittleEndianInputStream(new InputStream() {
 			ByteBuffer bb = b;
+			int mark;
+			int limit;
 			public synchronized int read() throws IOException {
 				if (!bb.hasRemaining()) {
 					return -1;
@@ -375,6 +377,24 @@ public class LittleEndianInputStream extends FilterInputStream {
 			@Override
 			public int available() throws IOException {
 				return bb.remaining();
+			}
+
+			@Override
+			public boolean markSupported() {
+				return true;
+			}
+
+			@Override
+			public synchronized void mark(int readlimit) {
+				mark = bb.position();
+				limit = readlimit;
+			}
+
+			@Override
+			public synchronized void reset() throws IOException {
+				if(bb.position() - mark > limit)
+					return;
+				bb.position(mark);
 			}
 		});
 		return leis;

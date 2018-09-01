@@ -6,6 +6,8 @@ import io.nayuki.bitcoin.crypto.Sha256;
 import io.nayuki.bitcoin.crypto.Sha256Hash;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Matteo on 08/10/2016.
@@ -15,9 +17,11 @@ public class TransactionInput implements BitSerializable {
     private OutPoint previous;
     private byte [] script;
     private int sequence;
+    private List<TransactionWitness> transWitnesses;
 
     public TransactionInput(){
         previous = new OutPoint();
+        transWitnesses = null;
     }
 
     public void setPrevious(byte [] hash,int index) {
@@ -41,6 +45,16 @@ public class TransactionInput implements BitSerializable {
 
     public void setSequence(int sequence) {
         this.sequence = sequence;
+    }
+
+    public List<TransactionWitness> getWitnesses(){
+        return transWitnesses;
+    }
+
+    public void addWitness(TransactionWitness tw){
+        if(transWitnesses == null)
+            transWitnesses = new ArrayList<>();
+        transWitnesses.add(tw);
     }
 
     @Override
